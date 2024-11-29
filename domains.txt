@@ -1,0 +1,5 @@
+example.com
+invalid-.com
+test-domain.org
+-example.com
+valid-domain.co.ru
