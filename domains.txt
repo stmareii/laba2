@@ -1,5 +1,10 @@
-example.com
+There is some text!!!
 invalid-.com
-test-domain.org
--example.com
-valid-domain.co.ru
+-invalid.com
+https://invalid-.com
+https://-invalid-.com
+good.com
+good-domain.org
+https://good.com
+https://good-domain.com
+https://valid-domain.co.ru
