@@ -41,16 +41,6 @@ def validate_domains_from_input():
         print(domain)
 
 
-def fetch_domains_from_url(url):
-    # Извлечение и проверка доменных имен с веб-страницы.
-    response = requests.get(url)
-    response.raise_for_status()  # Проверка успешного запроса
-    content = response.text
-    # Поиск всех потенциальных доменных имен в тексте страницы
-    possible_domains = re.findall(DOMAIN_REGEX, content)
-    return [domain for domain in possible_domains if validate_domain(domain)]
-
-
 if __name__ == "__main__":
     print("Выберите действие:")
     print("1. Проверить доменные имена из файла")
@@ -58,7 +48,7 @@ if __name__ == "__main__":
     choice = input("Введите номер действия: ").strip()
 
     if choice == "1":
-        input_file = input("Введите путь к файлу: ").strip()
+        input_file = input("Введите название файла: ").strip()
         valid_domains = process_domains_from_file(input_file)
         print("\nКорректные доменные имена из файла:")
         for domain in valid_domains:
